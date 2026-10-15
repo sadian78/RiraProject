@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\RiraProject.Framework.Application\RiraProject.Framework.Application.csproj" />
+    <ProjectReference Include="..\..\..\Framework\RiraProject.Framework.Domain\RiraProject.Framework.Domain.csproj" />
+    <ProjectReference Include="..\RiraProject.Users.Domain\RiraProject.Users.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Framework\RiraProject.Framework.Application\RiraProject.Framework.Application.csproj" />
+		<ProjectReference Include="..\..\..\Framework\RiraProject.Framework.Domain\RiraProject.Framework.Domain.csproj" />
+		<ProjectReference Include="..\..\..\Framework\RiraProject.Framework.Infrastructure\RiraProject.Framework.Infrastructure.csproj" />
+		<ProjectReference Include="..\RiraProject.Users.Application\RiraProject.Users.Application.csproj" />
+		<ProjectReference Include="..\RiraProject.Users.Domain\RiraProject.Users.Domain.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.18" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>

@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option csharp_namespace = "RiraProject.Users.Presentation.Protos";
+
+package user;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+message UserResponse {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string national_code = 4;
+  google.protobuf.Timestamp birth_date = 5;
+}
+
+message CreateUserRequest {
+  string first_name = 1;
+  string last_name = 2;
+  string national_code = 3;
+  google.protobuf.Timestamp birth_date = 4;
+}
+
+message UpdateUserRequest {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string national_code = 4;
+  google.protobuf.Timestamp birth_date = 5;
+}
+
+message GetUserByIdRequest {
+  string id = 1;
+}
+
+message DeleteUserRequest {
+  string id = 1;
+}
+
+message GetAllUsersResponse {
+  repeated UserResponse users = 1;
+}
+
+service UserGrpcService {
+  rpc CreateUser (CreateUserRequest) returns (UserResponse);
+  rpc GetUserById (GetUserByIdRequest) returns (UserResponse);
+  rpc GetAllUsers (google.protobuf.Empty) returns (GetAllUsersResponse);
+  rpc UpdateUser (UpdateUserRequest) returns (UserResponse);
+  rpc DeleteUser (DeleteUserRequest) returns (google.protobuf.Empty);
+}
